@@ -1,0 +1,19 @@
+server:
+  port: 9001
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/srm
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  main:
+    allow-bean-definition-overriding: true #允许我们自己覆盖spring放入到IOC容器的对象
+mybatis:
+  type-aliases-package: com.dpb.domain
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  level:
+    com.dpb: debug
+
